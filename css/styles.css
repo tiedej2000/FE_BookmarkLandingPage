@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+html {
+  font-family: "Rubik", serif;
+  font-size: 0.9rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.main-container {
+  width: 1440px;
+  margin: auto;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 140px;
+  margin-bottom: 80px;
+}
+nav .nav-right {
+  display: flex;
+}
+nav .nav-right ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+nav .nav-right ul li {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+nav .nav-right ul li a:hover {
+  color: hsl(0, 94%, 66%);
+}
+nav .nav-right ul .login-button {
+  border-style: none;
+  padding: 15px 45px;
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border: 0px solid hsl(0, 94%, 66%);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav .nav-right ul .login-button:hover {
+  background-color: white;
+  color: hsl(0, 94%, 66%);
+  border: 2px solid hsl(0, 94%, 66%);
+}
+
+.about {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  position: relative;
+}
+.about .text-content {
+  padding-left: 140px;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.about .text-content h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: hsl(229, 31%, 21%);
+}
+.about .text-content p {
+  max-width: 400px;
+  line-height: 1.5;
+  color: hsl(229, 8%, 60%);
+}
+.about .text-content .about-buttons {
+  display: flex;
+  gap: 20px;
+}
+.about .text-content .about-buttons button {
+  border-style: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.about .text-content .about-buttons .blue {
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  font-weight: 600;
+}
+.about .text-content .about-buttons .blue:hover {
+  border: 2px solid hsl(231, 69%, 60%);
+  background-color: white;
+  color: hsl(231, 69%, 60%);
+}
+.about .text-content .about-buttons .grey {
+  background-color: hsl(240, 14%, 97%);
+  font-weight: 600;
+  color: hsl(229, 31%, 21%);
+}
+.about .text-content .about-buttons .grey:hover {
+  border: 2px solid hsl(229, 31%, 21%);
+  background-color: white;
+  color: hsl(229, 31%, 21%);
+}
+.about .backdrop {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  height: 320px;
+  width: 450px;
+  background-color: hsl(231, 69%, 60%);
+  border-radius: 30% 0 0 30%;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.features .text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.features .text-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.features .text-content p {
+  line-height: 1.5;
+  padding: 20px 0;
+  color: hsl(229, 8%, 60%);
+}
+.features .feature-nav {
+  padding: 30px 0px;
+  border-bottom: 1px solid hsl(229, 8%, 60%);
+}
+.features .feature-nav ul {
+  display: flex;
+}
+.features .feature-nav ul li {
+  display: grid;
+  place-content: center;
+  width: 300px;
+  position: relative;
+  cursor: pointer;
+}
+.features .feature-nav ul li.active::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 300px;
+  background: hsl(0, 94%, 66%);
+  bottom: -30px;
+}
+.features .feature-nav ul li:hover {
+  color: hsl(0, 94%, 66%);
+}/*# sourceMappingURL=styles.css.map */

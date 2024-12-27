@@ -1,0 +1,237 @@
+// colors
+
+$softBlue: hsl(231, 69%, 60%);
+$softRed: hsl(0, 94%, 66%);
+
+$grayishBlue: hsl(229, 8%, 60%);
+$darkBlue: hsl(229, 31%, 21%);
+
+// font
+
+$fsReg: 0.9rem;
+$fwReg: 400;
+$fwBold: 500;
+
+$font: "Rubik", serif;
+
+// padding und margin
+
+$pd: 140px;
+$mb: 80px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+    // border: 1px solid red;
+}
+
+html{
+    font-family: $font;
+    font-size: $fsReg;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+// main container styling
+
+.main-container{
+    width: 1440px;
+    margin: auto;
+}
+
+// nav styling
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px $pd;
+    margin-bottom: $mb;
+
+    .nav-right{
+        display: flex;
+        ul{
+            display: flex;
+            gap: 40px;
+            align-items: center;
+
+            li{
+                text-transform: uppercase;
+                font-weight: $fwReg;
+                letter-spacing: 0.1rem;
+
+                a:hover{
+                    color: $softRed;
+                }
+            }
+
+            .login-button{
+                border-style: none;
+                padding: 15px 45px;
+                background-color: $softRed;
+                color: white;
+                border-radius: 5px;
+                box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
+                cursor: pointer;
+                border: 0px solid $softRed;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            
+                &:hover{
+                    background-color: white;
+                    color: $softRed;
+                    border: 2px solid $softRed;
+                }
+            }
+        }
+    }
+}
+
+// about sections styling
+
+.about{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $mb;
+    position: relative;
+    
+    .text-content{
+        padding-left: $pd;
+        max-width: 650px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        h2{
+            font-size: 3rem;
+            font-weight: $fwBold;
+            color: $darkBlue;
+        }
+
+        p{
+            max-width: 400px;
+            line-height: 1.5;
+            color: $grayishBlue;
+        }
+
+        .about-buttons{
+            display: flex;
+            gap: 20px;
+
+            button{
+                border-style: none;
+                padding: 15px 25px;
+                border-radius: 5px;
+                box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
+                border: 2px solid transparent;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .blue{
+                background-color: $softBlue;
+                color: white;
+                font-weight: 600;
+                &:hover{
+                    border: 2px solid $softBlue;
+                    background-color: white;
+                    color: $softBlue;
+                }
+            }
+
+            .grey{
+                background-color: hsl(240, 14%, 97%);
+                font-weight: 600;
+                color: $darkBlue;
+                &:hover{
+                    border: 2px solid $darkBlue;
+                    background-color: white;
+                    color: $darkBlue;
+                }
+            }
+        }
+    }
+
+    .backdrop{
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        height: 320px;
+        width: 450px;
+        background-color: $softBlue;
+        border-radius: 30% 0 0 30%;
+    }
+}
+
+
+// feature section
+
+.features{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: $mb;
+
+    .text-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        h3{
+            font-size: 1.8rem;
+            font-weight: $fwReg;
+        }
+
+        p{
+            line-height: 1.5;
+            padding: 20px 0;
+            color: $grayishBlue;
+        }
+    }
+
+    .feature-nav{
+        padding: 30px 0px;
+        border-bottom: 1px solid $grayishBlue;
+        
+        ul{
+            display: flex;
+            li{
+                display: grid;
+                place-content: center;
+                width: 300px;
+                position: relative;
+                cursor: pointer;
+                &.active::after{
+                    position: absolute;
+                    content: '';
+                    height: 2px;
+                    width: 300px;
+                    background: $softRed;
+                    bottom: -30px;
+                }
+
+                &:hover{
+                    color: $softRed;
+                }
+            }
+        }
+    }
+}
+
